@@ -17,10 +17,21 @@
 
 
 from fastapi import FastAPI
-import uvicorn 
 
-app=FastAPI()
+# Create a FastAPI instance
+app = FastAPI()
 
-@app.get('/')
-def read_root( ):
-    return {"Hello World"}
+# Home route
+@app.get("/")
+def read_root():
+    return {"message": "Hello, World! Welcome to FastAPI."}
+
+# A route with path parameters
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: str = None):
+    return {"item_id": item_id, "query": q}
+
+# A health check route
+@app.get("/health")
+def health_check():
+    return {"status": "Application is running!"}
