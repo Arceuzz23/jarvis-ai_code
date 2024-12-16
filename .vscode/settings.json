@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/4a55c38f-a115-497c-9f1b-2d797413eed7/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/JARVISaibot",
+    "appService.deploySubpath": "."
+}
